@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+.search-container{
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container h1{
+    font-family: 'Nunito', sans-serif;
+    text-transform: capitalize;
+}
+
+.search-container h1{
+    max-width: 356px;
+    text-align: center;
+}
+
+.search-bar{
+    margin-top: 30px;
+    width: 70%;
+}
+
+.search-bar input{
+    width: 85%;
+    border: 1px solid rgb(199, 193, 193);
+}
+
+.search-bar input, .btn-search-workouts{
+    padding: 10px;
+    outline: none;
+    border-radius: 2px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn-search-workouts{
+    text-align: center;
+    width: 15%;
+    border: none;
+    background-color: rgb(237, 21, 21);
+    box-shadow: 2px 2px 2px rgb(164, 161, 161);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+}
+
+.btn-search-workouts:hover{
+    background: transparent;
+    color: rgb(237, 21, 21);
+    border: 1px solid rgb(172, 15, 15);
+}
+
+.bodypart-container{
+    margin-top: 120px;
+    max-width: 80%;
+}
+
+

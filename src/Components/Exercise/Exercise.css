@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+.search-results__container{
+    /* display: grid;
+    grid-template-columns: auto auto;
+    place-items: center; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.results-banner{
+    font-family: 'Nunito', sans-serif;
+    margin: 70px 0 70px 10px;
+}

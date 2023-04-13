@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+.footer__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(249, 223, 227);
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer__container span{
+    color: red;
+}

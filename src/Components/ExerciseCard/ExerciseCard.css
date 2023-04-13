@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+.exercise-card__container{
+    border-top: 2px solid rgb(237, 21, 21);
+    width: 300px;
+    height: 450px;
+    margin: 0 20px 30px 20px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.exercise-card__container:hover{
+    transform: scale(1.05);
+}
+
+.exercise-card__container img{
+    width: 100%;
+    height: 250px;
+}
+
+.exercise-target-area span{
+    font-family: 'Nunito', sans-serif;
+    width: 30px;
+    margin: 10px;
+    padding: 7px;
+    border-radius: 15px;
+    color: white;
+    opacity: 0.8;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+}
+
+.exercise-target-area{
+    margin: 20px 0;
+}
+
+.exercise-target-area span:first-of-type{
+    background-color: rgb(237, 21, 21);
+}
+
+.exercise-target-area span:first-of-type:hover{
+    background-color: rgba(237, 21, 21, 0.7);
+}
+
+.exercise-target-area span:last-of-type{
+    background-color: rgb(255, 217, 0);
+}
+
+.exercise-target-area span:last-of-type:hover{
+    background-color: rgba(255, 217, 0, 0.7);
+}
+
+.exercise-name h2{
+    font-family: 'Nunito', sans-serif;
+    padding: 3px;
+    margin: 10px 0;
+    text-transform: capitalize;
+}

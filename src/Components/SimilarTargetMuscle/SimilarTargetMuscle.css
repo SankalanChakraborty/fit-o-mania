@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+.similar-target-muscles__container{
+    max-width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.similar-target-muscles__container a{
+    display: block;
+    width: 300px;
+    height: 400px;
+}
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 50px;
+}
+
+h1 span{
+    color: red;
+}

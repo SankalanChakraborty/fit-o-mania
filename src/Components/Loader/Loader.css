@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+.loader__container{
+    display: flex;
+}
+
+.loading-text{
+    font-family: 'Nunito', sans-serif;
+}
+
+.loading-text, .circle{
+    color: rgb(190, 187, 187);
+
+}
+
+.circle-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 36px;
+}
+
+.circle{
+    width: 7px;
+    height: 7px;
+    margin: 0 4px;
+    border-radius: 50%;
+    animation: fade 1s infinite ease-in-out;
+}
+
+@keyframes fade {
+    50% {background-color: black;}
+    100% {background-color: rgb(190, 187, 187);}
+}
