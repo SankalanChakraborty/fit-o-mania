@@ -7,7 +7,7 @@ import './SimilarTargetMuscle.css';
 const SimilarTargetMuscle = ({similarTargetMuscles}) => {
   return (
     <div className="similar-target-muscles__container">
-      <h1>Similar <span>Target Muscle</span> exercises</h1>
+      <h2>Similar <span>Target Muscle</span> exercises</h2>
         <ScrollMenu>
         {similarTargetMuscles.map((exercise)=>{
           return <ExerciseCard key={exercise.id} exercise={exercise}/>

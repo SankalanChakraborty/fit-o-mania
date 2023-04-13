@@ -13,11 +13,11 @@
     height: 400px;
 }
 
-h1{
+.similar-target-muscles__container h1{
     font-family: 'Nunito', sans-serif;
     margin-bottom: 50px;
 }
 
-h1 span{
+.similar-target-muscles span{
     color: red;
 }
