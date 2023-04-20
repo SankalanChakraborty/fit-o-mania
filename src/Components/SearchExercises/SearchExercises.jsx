@@ -18,6 +18,7 @@ const Search = () => {
       });
     }
     exercisesData();
+    // eslint-disable-next-line
   }, [])
 
   const clickHandler = async ()=>{
@@ -28,6 +29,7 @@ const Search = () => {
       console.log("Search data==================",searchedExercise);
       setExercises(searchedExercise);
       setInputValue('');
+      window.scrollTo({bottom: 1200, behavior: 'smooth'} )
     }
   }
   return (
