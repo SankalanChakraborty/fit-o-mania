@@ -11,11 +11,11 @@
     height: 400px;
 }
 
-h1{
+.similarEquipments__container h2{
     font-family: 'Nunito', sans-serif;
     margin-bottom: 50px;
 }
 
-h1 span{
+.similarEquipments__container h2 span{
     color: red;
 }

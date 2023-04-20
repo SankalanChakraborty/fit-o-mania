@@ -7,7 +7,7 @@ import './SimilarEquipment.css';
 const SimilarEquipment = ({simialrEquipment}) => {
   return (
     <div className="similarEquipments__container">
-      <h1>Similar <span>Equipments</span> Exerceise</h1>
+      <h2>Similar <span>Equipments</span> Exerceise</h2>
       <ScrollMenu>
           {simialrEquipment.map((equipmentExercise)=>{
             return <ExerciseCard key={equipmentExercise.id} exercise={equipmentExercise}/>
