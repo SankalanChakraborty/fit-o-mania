@@ -27,3 +27,12 @@
     font-family: 'Lora', serif;
     font-weight: 800;
 }
+
+.bodyPart-card__container span:hover{
+    text-decoration: underline;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}

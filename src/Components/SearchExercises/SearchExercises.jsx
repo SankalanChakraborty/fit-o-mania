@@ -1,49 +1,67 @@
-import React, { useEffect, useState } from 'react'
-import './SearchExercises.css';
-import { fetchData } from '../Utils/FetchData';
-import { exerciseOptions } from '../Utils/FetchData';
-import HorizontalScrollbar from '../HorizontalScrollbar/HorizontalScrollbar';
-import { useContext } from 'react';
-import { excerciseContext } from '../Utils/Context';
+import React, { useEffect, useState } from "react";
+import "./SearchExercises.css";
+import { fetchData } from "../Utils/FetchData";
+import { exerciseOptions } from "../Utils/FetchData";
+import HorizontalScrollbar from "../HorizontalScrollbar/HorizontalScrollbar";
+import { useContext } from "react";
+import { excerciseContext } from "../Utils/Context";
 
 const Search = () => {
-  const [inputValue, setInputValue] = useState('');
-  const {setExercises, bodyparts, setBodyparts} = useContext(excerciseContext);
+  const [inputValue, setInputValue] = useState("");
+  const { setExercises, bodyparts, setBodyparts } =
+    useContext(excerciseContext);
 
-  useEffect(()=>{
-    const exercisesData = async()=>{
-      const bodyPartExcerciseData = await fetchData('https://exercisedb.p.rapidapi.com/exercises/bodyPartList', exerciseOptions);
-      setBodyparts(()=> {
-        return ["all", ...bodyPartExcerciseData]
+  useEffect(() => {
+    const exercisesData = async () => {
+      const bodyPartExcerciseData = await fetchData(
+        "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
+        exerciseOptions
+      );
+      setBodyparts(() => {
+        return ["all", ...bodyPartExcerciseData];
       });
-    }
+    };
     exercisesData();
     // eslint-disable-next-line
-  }, [])
+  }, []);
 
-  const clickHandler = async ()=>{
-    if(inputValue){
-      const exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises`, exerciseOptions);
-      
-      const searchedExercise = exercisesData.filter((exercise)=>exercise.name.toLowerCase().includes(inputValue) || exercise.bodyPart.toLowerCase().includes(inputValue) || exercise.equipment.toLowerCase().includes(inputValue) || exercise.target.toLowerCase().includes(inputValue));
-      console.log("Search data==================",searchedExercise);
+  const clickHandler = async () => {
+    if (inputValue) {
+      const exercisesData = await fetchData(
+        `https://exercisedb.p.rapidapi.com/exercises`,
+        exerciseOptions
+      );
+      const searchedExercise = exercisesData.filter(
+        (exercise) =>
+          exercise.name.toLowerCase().includes(inputValue) ||
+          exercise.bodyPart.toLowerCase().includes(inputValue) ||
+          exercise.equipment.toLowerCase().includes(inputValue) ||
+          exercise.target.toLowerCase().includes(inputValue)
+      );
       setExercises(searchedExercise);
-      setInputValue('');
-      window.scrollTo({bottom: 1200, behavior: 'smooth'} )
+      setInputValue("");
+      window.scrollTo({ bottom: 1200, behavior: "smooth" });
     }
-  }
+  };
   return (
     <div className="search-container">
       <h1>Awesome exercises you should know</h1>
       <div className="search-bar">
-      <input type="text" value={inputValue} onChange={(e)=>setInputValue(e.target.value.toLowerCase())} placeholder="Search Exercises"/>
-      <button className="btn-search-workouts" onClick={clickHandler}>Search</button>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value.toLowerCase())}
+          placeholder="Search Exercises"
+        />
+        <button className="btn-search-workouts" onClick={clickHandler}>
+          Search
+        </button>
       </div>
       <div className="bodypart-container">
-          <HorizontalScrollbar data={bodyparts}/>
+        <HorizontalScrollbar data={bodyparts} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Search;
